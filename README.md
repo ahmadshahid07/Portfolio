@@ -42,7 +42,7 @@ git clone https://github.com/ahmadshahid07/Portfolio.git
 cd Portfolio
 
 # Start the local server
-npm start
+node server.js
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -69,3 +69,4 @@ vercel --prod
 ---
 
 © 2026 Ahmad Shahid. All rights reserved.
+
