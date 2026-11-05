@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ahmad Shahid - Software Developer & Entrepreneur. Passionate about full-stack web development, mobile applications, and AI integrations." />
+  <meta name="keywords"
+    content="Ahmad Shahid, Software Developer, Full-Stack Developer, Next.js, React, Flutter, Supabase, Firebase, Portfolio" />
+  <meta name="author" content="Ahmad Shahid" />
+  <meta name="theme-color" content="#f8fafc" id="theme-color-meta" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahmad Shahid - Software Developer & Entrepreneur" />
+  <meta property="og:description"
+    content="Portfolio of Ahmad Shahid. Explore modern full-stack web applications, mobile platforms, and digital products." />
+  <meta property="og:image" content="me.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ahmad Shahid - Portfolio" />
+  <meta name="twitter:description"
+    content="Software Developer & Entrepreneur specializing in full-stack web apps, Flutter, and modern UI systems." />
+  <meta name="twitter:image" content="me.png" />
+
+  <!-- Favicon (SVG Data URI - No 404 console errors) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232563eb'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='system-ui,sans-serif' font-size='48' font-weight='900' fill='white'>AS</text></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet" />
+
+  <title>Ahmad Shahid - Portfolio</title>
+
+  <!-- Early Theme Setter to prevent Flash of Unstyled Theme (FOUT) -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme-preference') || 'system';
+      const isDark = saved === 'dark' || (saved === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme-setting', saved);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css?v=glass_modern_4" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li><a href="#profile">My Profile</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="theme-switch" role="group" aria-label="Theme Switcher">
+        <button type="button" class="theme-btn" data-theme-val="light" title="Light Mode" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <span>Light</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-val="dark" title="Dark Mode" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <span>Dark</span>
+        </button>
+        <button type="button" class="theme-btn active" data-theme-val="system" title="System Default"
+          aria-pressed="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
+          <span>System</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile -->
+  <section id="profile" class="profile">
+    <img src="me.png" alt="Photo of Ahmad Shahid" width="180" height="180"
+      onerror="this.onerror=null; if(this.src.indexOf('me.png.png')===-1){this.src='me.png.png';}else if(this.src.indexOf('me.jpg')===-1){this.src='me.jpg';}" />
+    <h1>Ahmad Shahid</h1>
+    <p>Software Developer &amp; Entrepreneur | BS(SE) Student at Superior University</p>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="box">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>
+        I am a developer and small-business owner, passionate about building practical digital products and modern
+        software solutions. My interests include full-stack web development, mobile application development, AI-powered
+        applications, database management, and digital product development.
+      </p>
+      <p>
+        I work with technologies such as HTML, CSS, JavaScript, React, Next.js, Node.js, Java, C++, SQL, Flutter, and
+        Dart, along with database and backend platforms including MySQL, PostgreSQL, Supabase, and Firebase. I am
+        continuously
+        improving my skills in responsive UI design, REST API integration, authentication, database architecture, and
+        cloud-based application development.
+      </p>
+      <p>
+        My projects and product concepts focus on solving real-world problems through technology. These include
+        <strong>Trace-it</strong>, a campus Lost and Found platform; <strong>GrowthPilot AI</strong>, an AI-powered
+        digital marketing platform; <strong>Rankora</strong>, an SEO analysis and optimization tool; and
+        <strong>Skyth's</strong>, a leather wallet e-commerce brand. I am also exploring mobile and AI-driven solutions
+        in property technology, cricket analysis, and emergency communication.
+      </p>
+      <p>
+        Beyond development, I am interested in entrepreneurship, product strategy, user experience, and turning ideas
+        into useful digital products. My goal is to develop secure, scalable, user-friendly applications while
+        continuously learning modern technologies and building solutions with real-world value.
+      </p>
+      <p>
+        I welcome opportunities to collaborate on web applications, mobile apps, AI integrations, and innovative
+        software projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="box">
+    <h2>Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-logo-wrapper">
+          <img src="sch%201.jpeg" alt="Pakistan International School Logo" loading="lazy" decoding="async" />
+        </div>
+        <p>Pakistan International School, Taif, Saudi Arabia (2011–2018)</p>
+      </div>
+      <div class="edu-card">
+        <div class="edu-logo-wrapper">
+          <img src="alleid.png" alt="Allied School Logo" loading="lazy" decoding="async" />
+        </div>
+        <p>Allied School, Green Park Campus (2018–2021)</p>
+      </div>
+      <div class="edu-card">
+        <div class="edu-logo-wrapper">
+          <img src="collage.jpeg" alt="Superior College Logo" loading="lazy" decoding="async" />
+        </div>
+        <p>Superior College, Shalimar Campus (2021–2023)</p>
+      </div>
+      <div class="edu-card">
+        <div class="edu-logo-wrapper">
+          <img src="uni%202.png" alt="Superior University Logo" loading="lazy" decoding="async" />
+        </div>
+        <p>Superior University, Gold Campus (2023–Present)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="box">
+    <h2>Skills &amp; Technologies</h2>
+    <div class="skills-container">
+
+      <!-- Programming Languages -->
+      <div class="skill-category">
+        <h3>💻 Programming Languages</h3>
+        <div class="skills-grid">
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">C++</span>
+          <span class="skill">Java</span>
+          <span class="skill">Dart</span>
+          <span class="skill">SQL</span>
+        </div>
+      </div>
+
+      <!-- Frontend Development -->
+      <div class="skill-category">
+        <h3>🎨 Frontend Development</h3>
+        <div class="skills-grid">
+          <span class="skill">React.js</span>
+          <span class="skill">Next.js</span>
+          <span class="skill">Responsive Web Design</span>
+          <span class="skill">Tailwind CSS</span>
+          <span class="skill">shadcn/ui</span>
+          <span class="skill">UI/UX Implementation</span>
+          <span class="skill">Component-Based Development</span>
+          <span class="skill">Light &amp; Dark Theme Interfaces</span>
+          <span class="skill">Animations &amp; Interactive Interfaces</span>
+        </div>
+      </div>
+
+      <!-- Backend Development and APIs -->
+      <div class="skill-category">
+        <h3>⚙️ Backend Development &amp; APIs</h3>
+        <div class="skills-grid">
+          <span class="skill">Node.js</span>
+          <span class="skill">Express.js</span>
+          <span class="skill">NestJS <span class="skill-badge">Learning</span></span>
+          <span class="skill">REST API Development &amp; Integration</span>
+          <span class="skill">User Authentication &amp; Authorization</span>
+          <span class="skill">JWT-Based Authentication</span>
+          <span class="skill">Server-Side Application Development</span>
+          <span class="skill">Form Validation &amp; Error Handling</span>
+        </div>
+      </div>
+
+      <!-- Database and Cloud Platforms -->
+      <div class="skill-category">
+        <h3>🗄️ Database &amp; Cloud Platforms</h3>
+        <div class="skills-grid">
+          <span class="skill">MySQL</span>
+          <span class="skill">PostgreSQL</span>
+          <span class="skill">Supabase</span>
+          <span class="skill">Firebase</span>
+          <span class="skill">Database Design</span>
+          <span class="skill">SQL Queries</span>
+          <span class="skill">CRUD Operations</span>
+          <span class="skill">Relational Database Concepts</span>
+          <span class="skill">Cloud Database Integration</span>
+        </div>
+      </div>
+
+      <!-- Mobile Application Development -->
+      <div class="skill-category">
+        <h3>📱 Mobile Application Development</h3>
+        <div class="skills-grid">
+          <span class="skill">Flutter</span>
+          <span class="skill">Dart</span>
+          <span class="skill">Android App Development</span>
+          <span class="skill">Cross-Platform App Development</span>
+          <span class="skill">Mobile UI Development</span>
+          <span class="skill">Backend &amp; Database Integration</span>
+        </div>
+      </div>
+
+      <!-- Development Tools and Environments -->
+      <div class="skill-category">
+        <h3>🛠️ Development Tools &amp; Environments</h3>
+        <div class="skills-grid">
+          <span class="skill">Git</span>
+          <span class="skill">GitHub</span>
+          <span class="skill">Visual Studio Code</span>
+          <span class="skill">Android Studio</span>
+          <span class="skill">Windows</span>
+          <span class="skill">Linux / Ubuntu</span>
+          <span class="skill">Kali Linux</span>
+        </div>
+      </div>
+
+      <!-- AI, Marketing, and Business -->
+      <div class="skill-category">
+        <h3>🚀 AI, Marketing &amp; Business</h3>
+        <div class="skills-grid">
+          <span class="skill">AI-Powered Application Concepts</span>
+          <span class="skill">AI API Integration</span>
+          <span class="skill">SEO Analysis &amp; Optimization</span>
+          <span class="skill">Digital Marketing Fundamentals</span>
+          <span class="skill">Lead Generation Concepts</span>
+          <span class="skill">E-commerce Planning</span>
+          <span class="skill">Product Development</span>
+          <span class="skill">Technical Problem-Solving</span>
+          <span class="skill">Entrepreneurship</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="box">
+    <h2>Projects &amp; Products</h2>
+    <p>Explore some of the applications, platforms, and digital products I have built and developed:</p>
+    <div class="projects-grid">
+
+      <!-- Trace-it -->
+      <div class="project-card">
+        <div>
+          <div class="project-header">
+            <h3 class="project-title">🎒 Trace-it</h3>
+            <span class="project-badge">Campus Platform</span>
+          </div>
+          <p class="project-desc">
+            A campus Lost and Found platform built to help students and faculty efficiently report, match, track, and
+            recover misplaced items across campus grounds.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Full-Stack</span>
+            <span class="project-tag">React / Next.js</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://trace-it-psi.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="project-btn">🌐 View Brand</a>
+        </div>
+      </div>
+
+      <!-- GrowthPilot AI -->
+      <div class="project-card">
+        <div>
+          <div class="project-header">
+            <h3 class="project-title">🚀 GrowthPilot AI</h3>
+            <span class="project-badge">In Development</span>
+          </div>
+          <p class="project-desc">
+            An AI-powered digital marketing platform designed to streamline automated content generation, ad campaign
+            optimization, and lead generation for growing businesses.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">AI Integration</span>
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="#contact" class="project-btn secondary" onclick="contactForProject('GrowthPilot AI')">View
+            Details</a>
+        </div>
+      </div>
+
+      <!-- Rankora -->
+      <div class="project-card">
+        <div>
+          <div class="project-header">
+            <h3 class="project-title">🔍 Rankora</h3>
+            <span class="project-badge">SEO Platform</span>
+          </div>
+          <p class="project-desc">
+            A comprehensive SEO analysis and optimization tool delivering technical audits, on-page recommendations, and
+            keyword insights to increase search engine visibility.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">SEO Tool</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">REST APIs</span>
+            <span class="project-tag">Analytics</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://rankora-seo-audit.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="project-btn">🌐 View Brand</a>
+        </div>
+      </div>
+
+      <!-- Skyth's -->
+      <div class="project-card">
+        <div>
+          <div class="project-header">
+            <h3 class="project-title">👜 Skyth's</h3>
+            <span class="project-badge">E-Commerce Brand</span>
+          </div>
+          <p class="project-desc">
+            A premium direct-to-consumer leather wallet and accessories brand with a custom-crafted storefront, product
+            strategy, customer journey, and branding design.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">UI/UX Design</span>
+            <span class="project-tag">Product Strategy</span>
+            <span class="project-tag">Branding</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://skyths-store.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="project-btn">🛍️ View Brand</a>
+        </div>
+      </div>
+
+      <!-- Music Playlist Management System -->
+      <div class="project-card">
+        <div>
+          <div class="project-header">
+            <h3 class="project-title">🎧 Music Playlist Manager</h3>
+            <span class="project-badge">Open Source</span>
+          </div>
+          <p class="project-desc">
+            A Data Structures and Algorithms system leveraging doubly-linked lists and queuing to efficiently organize,
+            search, sort, and play musical tracks.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">Data Structures</span>
+            <span class="project-tag">Algorithms</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ahmadshahid07/DSA-PROJECT-MUSIC-PLAYLIST-MANAGEMENT" target="_blank"
+            rel="noopener noreferrer" class="project-btn">💻 GitHub Repository</a>
+        </div>
+      </div>
+
+      <!-- Makaanza — Property and Construction Platform -->
+      <div class="project-card">
+        <div>
+          <div class="project-header">
+            <h3 class="project-title">🏗️ Makaanza</h3>
+            <span class="project-badge">In Development</span>
+          </div>
+          <p class="project-subtitle">Property and Construction Platform &middot; Android Application &middot; Property
+            Technology</p>
+          <p class="project-desc">
+            A planned mobile platform combining property buying and selling with construction and development workflows.
+            The concept is intended to serve property seekers and people involved in construction projects through
+            accessible mobile tools and structured property information.
+          </p>
+          <p class="project-implementation">
+            <strong>Planned implementation:</strong> Flutter and Dart for the Android application, supported by backend
+            services, authentication, databases, and property-related data.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Dart</span>
+            <span class="project-tag">Android App</span>
+            <span class="project-tag">Property Technology</span>
+            <span class="project-tag">Backend Services</span>
+            <span class="project-tag">Databases</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="#contact" class="project-btn secondary" onclick="contactForProject('Makaanza')">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="box">
+    <h2>Contact &amp; Connect</h2>
+    <p>Feel free to reach out for collaborations, project inquiries, or networking:</p>
+
+    <div class="contact-links">
+      <a href="https://github.com/ahmadshahid07" target="_blank" rel="noopener noreferrer" class="btn">💻 GitHub
+        Profile</a>
+      <a href="https://www.linkedin.com/in/ahmad-shahid-profile/" target="_blank" rel="noopener noreferrer"
+        class="btn">💼 LinkedIn Profile</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmadshahid.45612@gmail.com" target="_blank"
+        rel="noopener noreferrer" class="btn">✉️ Send via Gmail</a>
+      <a href="mailto:ahmadshahid.45612@gmail.com" class="btn">📧 Default Mail App</a>
+      <a href="tel:03095126006" class="btn">📞 0309 5126006</a>
+    </div>
+
+    <!-- Quick Message Form -->
+    <div class="contact-form-container">
+      <h3>Quick Message</h3>
+      <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.2rem;">
+        Compose a message below to connect with <strong>ahmadshahid.45612@gmail.com</strong>:
+      </p>
+      <form id="contactForm" onsubmit="handleSendMailApp(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="senderName">Your Name</label>
+            <input type="text" id="senderName" placeholder="Enter your name" />
+          </div>
+          <div class="form-group">
+            <label for="senderSubject">Subject</label>
+            <input type="text" id="senderSubject" placeholder="Inquiry / Collaboration" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="senderMessage">Message</label>
+          <textarea id="senderMessage" rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn" onclick="sendViaGmail()">✉️ Send with Gmail</button>
+          <button type="submit" class="btn btn-secondary">📤 Send with Mail App</button>
+        </div>
+        <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button type="button" id="backToTop" class="back-to-top" title="Back to Top" aria-label="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="currentYear">2026</span> Ahmad Shahid | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Theme Management
+    (function () {
+      const themeButtons = document.querySelectorAll('.theme-btn');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      const themeColorMeta = document.getElementById('theme-color-meta');
+
+      function getSavedTheme() {
+        return localStorage.getItem('theme-preference') || 'system';
+      }
+
+      function applyTheme(preference) {
+        const isDark = preference === 'dark' || (preference === 'system' && prefersDark.matches);
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme-setting', preference);
+
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute('content', isDark ? '#0b0f19' : '#f8fafc');
+        }
+
+        themeButtons.forEach(btn => {
+          const val = btn.getAttribute('data-theme-val');
+          const isSelected = val === preference;
+          btn.classList.toggle('active', isSelected);
+          btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+        });
+      }
+
+      themeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const chosen = btn.getAttribute('data-theme-val');
+          localStorage.setItem('theme-preference', chosen);
+          applyTheme(chosen);
+        });
+      });
+
+      prefersDark.addEventListener('change', () => {
+        if (getSavedTheme() === 'system') {
+          applyTheme('system');
+        }
+      });
+
+      applyTheme(getSavedTheme());
+    })();
+
+    // Dynamic Year
+    (function () {
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+
+    // Navigation Scrollspy & Back to Top Controller
+    (function () {
+      const backToTop = document.getElementById('backToTop');
+      const navLinks = document.querySelectorAll('nav ul li a');
+      const sections = document.querySelectorAll('section[id]');
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+
+        // Back to top visibility
+        if (backToTop) {
+          if (scrollY > 300) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // Active navigation scrollspy
+        let currentSectionId = '';
+        sections.forEach(section => {
+          const top = section.offsetTop - 120;
+          const height = section.offsetHeight;
+          if (scrollY >= top && scrollY < top + height) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+
+    // Project Details helper -> Prefill Contact form
+    function contactForProject(projectName) {
+      const subjectInput = document.getElementById('senderSubject');
+      const messageInput = document.getElementById('senderMessage');
+      if (subjectInput) {
+        subjectInput.value = 'Inquiry: ' + projectName;
+      }
+      if (messageInput) {
+        messageInput.placeholder = 'Hi Ahmad, I would like to inquire about ' + projectName + '...';
+        setTimeout(() => messageInput.focus(), 350);
+      }
+    }
+
+    // Form Status Banner
+    function showFormStatus(message, isError) {
+      const statusEl = document.getElementById('formStatus');
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      statusEl.className = 'form-status ' + (isError ? 'error' : 'success');
+      statusEl.style.display = 'block';
+      setTimeout(() => {
+        statusEl.style.display = 'none';
+      }, 4500);
+    }
+
+    // Contact Form - Send via Gmail
+    function sendViaGmail() {
+      // Sanitize fields to prevent header injection
+      const name = document.getElementById('senderName').value.trim().replace(/[\r\n]+/g, ' ');
+      const subject = (document.getElementById('senderSubject').value.trim() || 'Portfolio Contact').replace(/[\r\n]+/g, ' ');
+      const message = document.getElementById('senderMessage').value.trim();
+
+      if (!message) {
+        showFormStatus('Please enter a message before sending.', true);
+        document.getElementById('senderMessage').focus();
+        return;
+      }
+
+      let body = message;
+      if (name) {
+        body += '\n\n— Sent by: ' + name;
+      }
+
+      const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=ahmadshahid.45612@gmail.com' +
+        '&su=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+      showFormStatus('Opening Gmail composer...', false);
+    }
+
+    // Contact Form - Send via Default Mail App
+    function handleSendMailApp(e) {
+      if (e) e.preventDefault();
+      // Sanitize fields to prevent header injection
+      const name = document.getElementById('senderName').value.trim().replace(/[\r\n]+/g, ' ');
+      const subject = (document.getElementById('senderSubject').value.trim() || 'Portfolio Contact').replace(/[\r\n]+/g, ' ');
+      const message = document.getElementById('senderMessage').value.trim();
+
+      if (!message) {
+        showFormStatus('Please enter a message before sending.', true);
+        document.getElementById('senderMessage').focus();
+        return;
+      }
+
+      let body = message;
+      if (name) {
+        body += '\n\n— Sent by: ' + name;
+      }
+
+      const mailtoUrl = 'mailto:ahmadshahid.45612@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      showFormStatus('Opening your default mail client...', false);
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+
+</html>
